@@ -1,0 +1,22 @@
+{
+    "Air": {
+        "Description": "Light as a feather, powerful as a hurricane.",
+        "Emoji": "🪨",
+        "Origin": "Default"
+    },
+    "Earth": {
+        "Description": "The timeless element that's always been and will always be.",
+        "Emoji": "🌎",
+        "Origin": "Default"
+    },
+    "Fire": {
+        "Description": "An ancient element used for survival.",
+        "Emoji": "🔥",
+        "Origin": "Default"
+    },
+    "Water": {
+        "Description": "Always in motion, flowing from mountains to sea.",
+        "Emoji": "💧",
+        "Origin": "Default"
+    }
+}

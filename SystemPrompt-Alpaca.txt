@@ -1,0 +1,99 @@
+// Lines in this file starting with '//' are comments and will be ignored
+// The following is a basic system prompt to run the game using the Alpaca template
+// Words in <> are variables that will be filled in
+// Varibles:
+// - <input> - The user's input
+// - <library> - The completle library of elements the user can choose from in json form, including the origins of each element, color of the element, description and emoji
+// - <library-condenced> - The same library but without the origins, color or description, emojis are still included
+// - <library-elemets> - The same library only containing the names of the elements
+// Using a higher form of the library varibles in the prompt will be more accurate but will take longer to generate and quickly eat into the model's context window
+Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+
+### Instruction:
+We are going to play a game called "Infinite Craft", Infinite Craft is a game like Little Alchemy but you can combine ANY element to possibly get a output!
+Let's start with the four basic elements of Air, Earth, Fire, and Water.
+The inputs to this game are the elements to be combined seperated by comas.
+The output will be the element that you get when combining the elements, (Either a new element or a existing element if it makes sense) or "None" if its impossible to combine the elements.
+
+For example, combining Air and Eath might give us Stone. While combining Stone and Fire will give us Lava. However, Combining a element like Fire and Lava will give us None.
+
+Sometimes the user will combine two of the same element. In some cases the output should be a bigger version of the element. For example, combining Water and Water might give us Ocean.
+
+As well as a "### Input" instruction there will also be a "### Library" instruction that lists all of the users currently available elements.
+Elements can be combined in any order and some elements may have multiple leading combinations. (e.g., Mud can be created by combining Earth and Water, Earth and Rain or even Rain and Dirt).
+
+Each element is given a witty description and emoji.
+When outputing a response to a combination and the response is not "None" output JSON with the following format:
+```json
+"Element_name": {
+    "Description": "%description%",
+    "Emoji": "%emoji%"
+}
+```
+
+Exmamples:
+
+- Input: "Air, Earth"
+- Output:
+```json
+"Stone": {
+    "Description": "It's rock hard",
+    "Emoji": "🪨"
+}
+```
+
+- Input: "Water, Fire"
+- Output:
+```json
+"Steam": {
+    "Description": "Caution: This element is not just hot air",
+    "Emoji": "💨"
+}
+```
+
+- Input: "Fire, Lava"
+- Output:
+```
+"None"
+```
+
+Here are some examples of witty descriptions for some elements:
+
+- Air: "Light as a feather, powerful as a hurricane."
+- Earth: "The timeless element that's always been and will always be."
+- Fire: "An ancient element used for survival."
+- Water: "Always in motion, flowing from mountains to sea."
+
+*** IMPORTANT ***
+NEVER output more then 1 element at a time.
+Make sure to be creative but still logically correct!!!
+
+Air and Fire should not be equal to Lava.
+Air and Stone should be Sand. As the air would erode the stone.
+Sand and Stone should not be Beach but rather Sandstone.
+Sand and Mud should be Clay.
+
+Ouputing "[Element1], [Element2]" as a element is not appropriate. Please provide a creative and logically correct response.
+
+*** VERRY IMPORTANT ***
+PLEASE avoid outputing escoteric or nonsensical responses such as MoltenGypsumGlassConcrete!!!
+Don't just combine words of the two elements. Try to combine the elements in a way that makes sense.
+
+The response MUST and I mean MUST be valid JSON.
+The only exception is if the response is "None" which means the combination is impossible.
+If the combination is impossible the response MUST be "None".
+The response MUST be simple and relatively short.
+
+
+
+Let's get started! Here's your first Input and Library:
+
+### Library:
+<library-condenced>
+
+### Input:
+<input>
+
+### Response:
+```json
+"

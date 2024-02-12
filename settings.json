@@ -31,11 +31,19 @@
         "max_tokens": 64,
         "temperature": 1.33,
         "top_p": 0.33,
-        "stop": ["\n", ".", "INST"],
+        "stop": ["```", "###"],
         "seed": 42
     },
 
     // >---- Game settings ----<
-    "User-Interface": "CLI", // CLI is the only option... for now... :3
-    "System-Prompt": "system-prompt-alpaca.txt"
+    "User-Interface": "CLI", // CLI is the only option... for now... :3 TODO: Add Pygame GUI, possibly a WebUI too
+    "System-Prompt": "SystemPrompt-Alpaca.txt",
+    "Auto-Play":
+    {
+        "Prefer-New-Elements": true, // if true AutoPlay will prefer new elements
+        "Perfer-New-Elements-FavorN-Ratio": 4, // Fraction of the library to apply weighting to
+        "Perfer-New-Elements-Weight-Old": 0.5,  // Weight to assign to old elements
+        "Perfer-New-Elements-Weight-New": 2,  // Weight to assign to new elements
+        "Prefer-New-Elements-Weight-Curve": 1.5 // 1 is a linear curve 2 is steeper
+    }
 }

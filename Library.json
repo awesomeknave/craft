@@ -1,0 +1,159 @@
+{
+    "Air": {
+        "Description": "Light as a feather, powerful as a hurricane.",
+        "Emoji": "\u00f0\u0178\u00aa\u00a8",
+        "Origin": "Default"
+    },
+    "Earth": {
+        "Description": "The timeless element that's always been and will always be.",
+        "Emoji": "\u00f0\u0178\u0152\u017d",
+        "Origin": "Default"
+    },
+    "Fire": {
+        "Description": "An ancient element used for survival.",
+        "Emoji": "\u00f0\u0178\u201d\u00a5",
+        "Origin": "Default"
+    },
+    "Water": {
+        "Description": "Always in motion, flowing from mountains to sea.",
+        "Emoji": "\u00f0\u0178\u2019\u00a7",
+        "Origin": "Default"
+    },
+    "Dust": {
+        "Emoji": "\u00f0\u0178ust",
+        "Description": "A fine powder left behind after the wind erodes the earth",
+        "Origin": [
+            [
+                "Air",
+                "Earth"
+            ],
+            [
+                "Air, Dust"
+            ]
+        ]
+    },
+    "Mud": {
+        "Emoji": "\u00f0\u0178\u00aa\u00b3",
+        "Description": "A mixture of water and earth, perfect for making pies",
+        "Origin": [
+            [
+                "Dust",
+                "Water"
+            ]
+        ]
+    },
+    "Ash": {
+        "Emoji": "\u00f0\u0178\u2019\u00aa",
+        "Description": "The remnants of a once vibrant life",
+        "Origin": [
+            [
+                "Mud",
+                "Fire"
+            ],
+            "!autoplay"
+        ]
+    },
+    "Cinder": {
+        "Emoji": "\u00f0\u0178\u2019\u00a7",
+        "Description": "A solid piece of ash from a burnt fire",
+        "Origin": [
+            [
+                "Ash",
+                "Fire"
+            ]
+        ]
+    },
+    "Clay": {
+        "Emoji": "\u00f0\u0178\u00aa\u00b3",
+        "Description": "A mixture of Cinder and Earth forms Clay",
+        "Origin": [
+            [
+                "Cinder",
+                "Earth"
+            ],
+            "!autoplay",
+            [
+                "Ice, Mud"
+            ]
+        ]
+    },
+    "Glass": {
+        "Emoji": "\u00f0\u0178\u2019\u00aa",
+        "Description": "A clear and hard element formed from the intense heat of fire melting clay.",
+        "Origin": [
+            [
+                "Clay",
+                "Fire"
+            ]
+        ]
+    },
+    "Brick": {
+        "Emoji": "\u00f0\u0178\u2018\u2022",
+        "Description": "A solid building block made from mud and clay",
+        "Origin": [
+            "!autoplay",
+            [
+                "Earth, ClayBrick"
+            ]
+        ]
+    },
+    "ClayBrick": {
+        "Emoji": "\u00f0\u0178\u2019\u00a7",
+        "Description": "A sturdy and durable building material",
+        "Origin": [
+            "!autoplay"
+        ]
+    },
+    "Ice": {
+        "Emoji": "\u00f0\u0178\u0152\u0161",
+        "Description": "A frozen form of water, beautiful and tranquil",
+        "Origin": [
+            "!autoplay"
+        ]
+    },
+    "IceBrick": {
+        "Emoji": "\u00f0\u0178\u00aa\u00a8\u00f0\u0178\u00aa\u00a7",
+        "Description": "A brick made of ice, it's cool underfoot",
+        "Origin": [
+            [
+                "ClayBrick, Ice"
+            ]
+        ]
+    },
+    "Sand": {
+        "Emoji": "\u00f0\u0178\u00aa\u00b8",
+        "Description": "A common element formed from the erosion of rocks.",
+        "Origin": [
+            [
+                "Glass, Earth"
+            ]
+        ]
+    },
+    "GlassBrick": {
+        "Emoji": "\u00f0\u0178\u00aa\u00a9",
+        "Description": "A brick made of glass, not the most practical building material",
+        "Origin": [
+            [
+                "Brick, Glass"
+            ]
+        ]
+    },
+    "GlassShard": {
+        "Emoji": "\u00f0\u0178\u2019\u00a7",
+        "Description": "A sharp and fragile piece of glass",
+        "Origin": [
+            [
+                "Air, Glass"
+            ]
+        ]
+    },
+    "IceShard": {
+        "Emoji": "\u00f0\u0178\u00aa\u00a7",
+        "Description": "A sharp and jagged piece of ice",
+        "Origin": [
+            [
+                "Ice, GlassShard"
+            ]
+        ]
+    }
+}

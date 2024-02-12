@@ -5,6 +5,18 @@ This module contains the functions for the backend.
 The backend is what generates all the text for the game.
 """
 
+def Generate():
+    """
+    The default Generate function returns placeholder text.
+    
+    Args:
+    - None
+
+    Returns:
+    - str: No backend was loaded!
+    """
+    return 'No backend was loaded!'
+
 import json5 as json
 
 # Load settings
@@ -16,7 +28,7 @@ if settings['Backend'] == 'text-generation-webui':
     
     # Headers for WebUI
     headers = {
-        "Content-Type": "application/json"
+        'Content-Type': 'application/json'
     }
 
     def Generate(prompt):
@@ -31,18 +43,18 @@ if settings['Backend'] == 'text-generation-webui':
         """
         # Prepare data for the request
         data = {
-            "prompt": prompt,
-            "max_tokens": settings['Text-Generation']['max_tokens'],
-            "temperature": settings['Text-Generation']['temperature'],
-            "top_p": settings['Text-Generation']['top_p'],
-            "stop": settings['Text-Generation']['stop']
+            'prompt': prompt,
+            'max_tokens': settings['Text-Generation']['max_tokens'],
+            'temperature': settings['Text-Generation']['temperature'],
+            'top_p': settings['Text-Generation']['top_p'],
+            'stop': settings['Text-Generation']['stop']
         }
 
         # Send a request to the WebUI API for text generation
         response = requests.post(url=settings['Backend-Settings']['WebUI-API'], headers=headers, json=data, verify=False).json()
 
         # Extract and return the generated text
-        return response.get("choices")[0].get("text")
+        return response.get('choices')[0].get('text')
 
 # Load Langchain backend    
 elif settings['Backend'] == 'langchain':
@@ -57,7 +69,7 @@ elif settings['Backend'] == 'langchain':
         verbose = settings['Backend-Settings']['Langchain-Settings']['verbose'],
 
         model_kwargs = {
-            "f_16_kb": settings['Backend-Settings']['Langchain-Settings']['f_16_kb']
+            'f_16_kb': settings['Backend-Settings']['Langchain-Settings']['f_16_kb']
         },
 
         temperature = settings['Text-Generation']['temperature'],
@@ -114,3 +126,7 @@ elif settings['Backend'] == 'openai':
 # Test the backend
 if __name__ == '__main__':
     print('The quick brown fox ' + Generate('The quick brown fox '))
+else:
+    BACKEND = {
+        'Generate': Generate
+    }
